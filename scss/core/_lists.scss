@@ -1,0 +1,49 @@
+ol, ul {
+  display: inline;
+  
+  li {
+    display: inline;
+  }
+  
+  &.bordered {
+    
+  }
+  
+  &.comma-separated {
+    li:not(:last-child):after {
+      content: ', '
+    }
+  }
+  
+  &.numbered {
+    counter-reset: li;
+
+    li {
+      counter-increment: li;
+      
+      &:before {
+        content: counter(li) '. ';
+        display: inline-block;
+        margin-right: 0.5em;
+        text-align: right;
+        width: 1.5em;
+      }
+    }
+  }
+  
+  &.striped {
+    li {
+      padding: 1rem;
+      
+      &:nth-of-type(even) {
+        background-color: rgba(white, 0.06);
+      }
+    }
+  }
+  
+  &.vertical {
+    li {
+      display: list-item;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, [role=application] {
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 100vw;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+}
+
+[role=application] {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+}
